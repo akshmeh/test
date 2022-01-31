@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider</title>
+</head>
+<body>
+    <div class="slider-genrator"></div>
+    <script>
+        var main = document.querySelector('.slider-genrator');
+        //each slide with
+        let eachSlideWidth=300;
+        //each slide height
+        let heightSlider=300;
+        //how many slider do you want
+        let sliderCount=3;
+        let widthSlider=eachSlideWidth;
+        // corners rounded
+        let sliderRounded = 20;
+        //set each slide timer
+        let timer = 3000;
+        // instead of colors you can put images in a form of url()
+        let bg = ['blue','grey','green','red','lime'];
+        var style = document.createElement('style');
+        var eachSlide =document.getElementsByClassName('slider');
+        //nav buttons are under working process please dont make sliderBtn = true
+        let sliderBtn = true;
+        // if you want hover on pause animation just replace false with true
+        let hoverPause = false;
+        let styleClass ={
+            "sliderContainer":'.slider-container { width:'+eachSlideWidth+'px;height:'+heightSlider+'px;border:2px solid black; overflow-x:hidden;border-radius:'+sliderRounded+'px;margin:20px;}\n',
+            "sliderID":'#slider{width:'+widthSlider+'px;height:'+heightSlider+'px;position:relative;}',
+            "sliderClass":'.slider{width:'+eachSlideWidth+'px;height:'+heightSlider+'px;background-color:lightgrey;position:absolute;top:0;left:0;display:none}',
+            "sliderMoveClass":'.slider-move{display:block !important;}',
+            "prev":'.slider-container .prev{width:20px;height:20px;text-align:center;position:absolute;top:50%;left:0;background-color:lightgrey;border:1px solid black;cursor:pointer;padding:5px;display: block;z-index: 999;}',
+            "next":'.slider-container .next{width:20px;height:20px;text-align:center;position:absolute;top:50%;right:0;background-color:lightgrey;border:1px solid black;cursor:pointer;padding:5px;display: block;z-index: 999;}'
+        }
+        
+
+        
+        main.innerHTML= '<div class="slider-container"></div>';
+        var slider = document.querySelector('.slider-container');
+        slider.innerHTML+='<div id="slider"></div>';
+        
+        style.type = 'text/css';
+        style.innerHTML =styleClass.sliderContainer;
+        style.innerHTML+= styleClass.sliderID;
+        
+            var sliderFlex = document.querySelector('#slider');
+            if(sliderBtn){
+            prevSymbol = '&#60;';
+            nextSymbol = '&#62;';
+            sliderFlex.innerHTML+='<div class="prev">'+prevSymbol+'</div><div class="next">'+nextSymbol+'</div>';
+            style.innerHTML+=styleClass.prev;
+            style.innerHTML+=styleClass.next;
+        }
+        style.innerHTML+='.slider h1{position:absolute;top:40%;left:30%;}';
+            for(let i=0;i<sliderCount;i++){
+                let sl = '<div class="slider sliders'+[i]+'"></div>';
+                let ss = '.sliders'+[i]+'{background-color:'+bg[i]+' !important}';
+                sliderFlex.innerHTML+=sl;
+                style.innerHTML+=ss;
+                document.querySelector('.sliders'+[i]).innerHTML+='<h1>Slide '+[i+1]+'</h1>'
+            }
+            style.innerHTML+=styleClass.sliderClass;
+            document.getElementsByTagName('head')[0].appendChild(style);
+            style.innerHTML+=styleClass.sliderMoveClass;
+        let e=0
+        
+    
+    sliderShow(e)
+    console.log(e)
+    if(e<=0){
+
+        eachSlide[0].classList.add('slider-move')
+    }
+        function sliderShow(n){
+            // console.log(e-1)
+            for(var i = 0;i<eachSlide.length;i++){
+            if(eachSlide[i].classList.contains('slider-move')){
+                eachSlide[i].classList.remove('slider-move');
+            }
+        }
+        e++;
+        if(e > eachSlide.length){e=1}
+        
+        function prevSlide(){
+        //    st && clearInterval(st)
+        document.querySelector('.prev').addEventListener('click',()=>{
+            console.log('done')
+           let pn = e-1
+            eachSlide[pn-1].classList.add('slider-move')
+        })     
+    }
+        function nextSlide(){
+        //    st && clearInterval(st)
+        document.querySelector('.next').addEventListener('click',()=>{
+           console.log('done')
+           let pn = e+1
+           eachSlide[e].classList.add('slider-move')
+        }) 
+    }
+    eachSlide[e-1].classList.add('slider-move')
+    }
+    let st;
+    st = setInterval(sliderShow,timer)
+    const hoverRemove=false;
+    if(hoverPause){
+        for(var i =0;i<eachSlide.length;i++){
+
+            eachSlide[i].addEventListener('mouseover',()=>{st && clearInterval(st)})
+            eachSlide[i].addEventListener('mouseout',()=>{if(!hoverRemove){st = setInterval(sliderShow,timer)}})
+        }
+    }
+   
+    </script>
+</body>
+</html>
+<!-- function prevSlide(n){
+    //    st && clearInterval(st)
+       console.log('done')
+       let pn = e-1
+        for(let index=0;index<eachSlide.length;index++){
+            if(eachSlide[index].classList.contains('slider-move')){
+            eachSlide[index].classList.remove('slider-move');
+        }
+        if(pn <= 0){sliderShow(eachSlide.length-1)}else{sliderShow(pn)}
+    }
+}
+    function nextSlide(n){
+    //    st && clearInterval(st)
+       console.log('done')
+       let pn = e+1
+        for(let index=0;index<eachSlide.length;index++){
+            if(eachSlide[index].classList.contains('slider-move')){
+            eachSlide[index].classList.remove('slider-move');
+        }
+        if(pn<eachSlide.length){sliderShow(0)}else{sliderShow(pn)}
+    }
+} -->

@@ -1,0 +1,580 @@
+
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;700&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+/* .topsection{
+  margin-bottom: 20px;
+} */
+.banner-heading{
+  width: 100%;
+}
+.banner-heading h1{
+  font-size: 1.5em;
+  line-height: 25px;
+  color: #195c65;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.flex{
+  margin-top: 97px;
+ padding:0px 0px;
+ /* background-color: #edf2f5; */
+ width: 100%;
+ height: 590px;
+ background: url(../img/home-banner-bg.jpg);
+ background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: 100%;
+    position: relative;
+    transition: 0.3s;
+}
+.left-heading{
+  position: absolute;
+  top:55%;
+  left: 2%;
+  line-height: 19px;
+  text-align: center;
+  font-size: .9em;
+  color: #195c65;
+}
+.left-heading h2{
+  font-weight: 400;
+
+}
+.right-heading{
+  position: absolute;
+  top:55%;
+  right: 2%;
+  line-height: 19px;
+  text-align: center;
+  font-size: .9em;
+  color: #195c65;
+}
+.right-heading h2{
+  font-weight: 400;
+
+}
+.card{
+  float: left;
+margin:15px 11px;
+/* margin-left: 8px; */
+  /* border-radius: 16px; */
+  width: 225.75px;
+  height: var(--smallheight);
+  /* background: url(https://picsum.photos/360/360?image=0); */
+  background-color: #919191 !important;
+  position: relative;
+  overflow: hidden;
+  /* box-shadow:-1px 0px 6px 4px rgb(59 138 148 / 44%); */
+  /* box-shadow:0px 0px 6px 4px rgb(154 153 148); */
+  /* border: 2px solid #2e747d; */
+  /* border: 3px solid #edf2f5; */
+  border-radius: 15px;
+}
+.flex-column{
+  width: 250.75px;
+  float: left;
+}
+:root{
+  --bigheight:190px;
+  --medheight:160px;
+  --smallheight:140px;
+}
+.card-1{
+/* background:url(../img/bannerImg/Cement.jpg); */
+height: var(--bigheight);
+}
+.card-2{
+/* background:url(../img/bannerImg/Horticulture.jpg); */
+  height: var(--smallheight);
+}
+.card-3{
+ /* background:url(../img/bannerImg/Agro-chemicals.jpg); */
+height: var(--medheight);
+}
+.card-4{
+ /* background:url(../img/bannerImg/Food-services.jpg); */
+  height: var(--smallheight);
+}
+.card-5{
+/* background:url(../img/bannerImg/consulting.jpg); */
+  height: var(--medheight);
+}
+.card-6{
+/* background:url(../img/bannerImg/Financial-services.jpg); */
+  height: var(--bigheight);
+}
+.card-7{
+ /* background:url(../img/bannerImg/Sports-Entertainment.jpg); */
+  height: var(--bigheight);
+}
+.card-8{
+/* background:url(../img/bannerImg/International-trade.jpg); */
+height: var(--medheight);
+}
+.card-9{
+/* background:url(../img/bannerImg/Sugar.jpg); */
+  height: var(--smallheight);
+}
+.card-10{
+height: var(--medheight);
+/* background:url(../img/bannerImg/engineering.jpg); */
+}
+.card-11{
+  height: var(--smallheight);
+  /* background:url(../img/bannerImg/Electric-cables.jpg); */
+}
+.card-12{
+  height: var(--bigheight);
+ /* background:url(../img/bannerImg/Cement.jpg); */
+}
+.card:before{
+
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background-color: rgba(#000,.92);
+}
+  .img{
+/* background: url(../img/bannerImg/Cement.jpg); */
+background-size: contain;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    transition: 0.3s;
+  }
+  .card-1 .img{
+      background: url(../img/bannerImg/Cement.jpg );
+    }
+    .card-2 .img{
+      background: url(../img/bannerImg/Horticulture.jpg);
+    }
+    .card-3 .img{
+      background: url(../img/bannerImg/Agro-chemicals.jpg);
+    }
+    .card-4 .img{
+      background: url(../img/bannerImg/Food-services.jpg);
+    }
+    .card-5 .img{
+      background: url(../img/bannerImg/consulting.jpg);
+    }
+    .card-6 .img{
+      background: url(../img/bannerImg/Financial-services.jpg);
+    }
+    .card-7 .img{
+      background: url(../img/bannerImg/Sports-Entertainment.jpg);
+    }
+    .card-8 .img{
+      background: url(../img/bannerImg/International-trade.jpg);
+    }
+    .card-9 .img{
+      background: url(../img/bannerImg/Sugar.jpg);
+    }
+    .card-10 .img{
+      background: url(../img/bannerImg/engineering.jpg);
+    }
+    .card-11 .img{
+      background: url(../img/bannerImg/paint.jpg);
+    }
+    .card-12 .img{
+      background: url(../img/bannerImg/Electric-cables.jpg );
+    }
+    /* .card span{
+
+      width: 25%;
+      height: 100%;
+      background: url(https://picsum.photos/360/360?image=0);
+      background-color: #56b0bc;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      transition: .5s;
+    } */
+    /* .card-1 span{
+      background: url(../img/bannerImg/Cement.jpg );
+    }
+    .card-2 span{
+      background: url(../img/bannerImg/Horticulture.jpg);
+    }
+    .card-3 span{
+      background: url(../img/bannerImg/Agro-chemicals.jpg);
+    }
+    .card-4 span{
+      background: url(../img/bannerImg/Food-services.jpg);
+    }
+    .card-5 span{
+      background: url(../img/bannerImg/consulting.jpg);
+    }
+    .card-6 span{
+      background: url(../img/bannerImg/Financial-services.jpg);
+    }
+    .card-7 span{
+      background: url(../img/bannerImg/Sports-Entertainment.jpg);
+    }
+    .card-8 span{
+      background: url(../img/bannerImg/International-trade.jpg);
+    }
+    .card-9 span{
+      background: url(../img/bannerImg/Sugar.jpg);
+    }
+    .card-10 span{
+      background: url(../img/bannerImg/Electric-cables.jpg);
+    }
+    .card-11 span{
+      background: url(../img/bannerImg/engineering.jpg);
+    }
+    .card-12 span{
+      background: url(../img/bannerImg/Cement.jpg );
+    } */
+    span:nth-child(1){
+
+      background-position: 0;
+      transition-delay: 0;
+    }
+        span:nth-child(2){
+
+          background-position: 33.33333%;
+          transition-delay: .1s;
+        }
+        span:nth-child(3){
+
+          background-position: 66.66666%;
+          transition-delay: .2s;
+        }
+        span:nth-child(4){
+
+          background-position: 100%;
+          transition-delay: .3s;
+        }
+        
+/* .card:hover .img>span{
+
+  transform: translateY(-100%)
+} */
+.card:hover .img{
+  transform: scale(1.1);
+}
+.flex:hover .img{
+  filter: grayscale(1);
+}
+.card:hover .img{
+  filter: grayscale(0);
+}
+.card:hover .content-home{
+
+    transform: translateY(0%);
+    transition: 0.3s;
+    /* background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0%, rgba(255, 255, 255, 0) 100%); */
+    /* background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0%, rgb(0 0 0 / 18%) 100%); */
+    background: linear-gradient(0deg, rgb(0 0 0 / 96%) 0%, rgb(0 0 0 / 45%) 100%);
+  }
+  
+.content-home{
+
+  box-sizing: border-box;
+  display: flex;
+  justify-content: flex-end;
+
+  flex-direction: column;
+  color: white;
+  padding: 20px 20px;
+  width: 100%;
+  height: 100%;
+  /* transform: translateY(100%); */
+  line-height: 22px;
+  font-size: 0.9em;
+}
+.content-home h2{
+  font-size: 14px;
+  /* font-family: "Roboto", sans-serif; */
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: 600;
+  transition: 0.1s;
+  margin-bottom:4px;
+}
+.content-home h4{
+  font-size: 12px;
+  /* font-family: "Roboto", sans-serif; */
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: 500;
+  transition: 0.1s;
+  line-height: 16px;
+}
+/* model */
+.modal-body img{
+  float: left;
+  width: 56%;
+  height: 450px;
+  border: 3px solid #2e747d;
+}
+.modal-header {
+  color: #fff;
+  margin-left: 24px;
+  float: left;
+line-height: 35px;
+width: 38%;
+}
+.modal-body h1{
+  color: #fff;
+  font-size: 22px;
+  /* font-family: "Roboto", sans-serif; */
+  font-family: 'Noto Sans', sans-serif;
+  margin-bottom:4px;
+}
+.modal-body h3{
+  color: #fff;
+  font-size: 17px;
+  line-height: 22px;
+  /* font-family: "Roboto", sans-serif; */
+  font-family: 'Noto Sans', sans-serif;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+.modal-body p{
+  color: #fff;
+  font-size: 14px;
+  line-height: 20px;
+  /* font-family: "Roboto", sans-serif; */
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: 500;
+  /* -webkit-text-stroke: 1px rgb(255, 255, 255); */
+}
+
+
+.close {
+	cursor: pointer;
+  font-size: 16px;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: -60px;
+  right:0%;
+  color: #fff;
+  font-weight: 900;
+  background: url(../img/bannerImg/cancel.svg);
+}
+.modal-wrapper {
+  
+	align-items: center;
+	background: rgba(0, 0, 0, 0.9);
+	bottom: 0;
+	/* display: flex; */
+	justify-content: center;
+	left: 0;
+	position: fixed;
+	right: 0;
+	top: 0;
+  z-index: 1;
+}
+
+#modal {
+	opacity: 0;
+	transition:  opacity 0.5 ease-in-out;
+	visibility: hidden;
+
+}
+#modal:target {
+  opacity: 1;
+  visibility: visible;
+}
+
+#modal .modal-body {
+  opacity: 1;
+  transform: translateY(60px);
+}
+#modal2 {
+	opacity: 0;
+	transition:  opacity 0.5 ease-in-out;
+	visibility: hidden;
+
+}
+#modal2:target {
+  opacity: 1;
+  visibility: visible;
+}
+
+#modal2 .modal-body {
+  opacity: 1;
+  transform: translateY(60px);
+}
+#modal3 {
+  opacity: 0;
+  transition:  opacity 0.5 ease-in-out;
+  visibility: hidden;
+
+}
+#modal3:target {
+  opacity: 1;
+  visibility: visible;
+}
+
+#modal3 .modal-body {
+  opacity: 1;
+  transform: translateY(60px);
+}
+#modal4 {
+  opacity: 0;
+  transition:  opacity 0.5 ease-in-out;
+  visibility: hidden;
+
+}
+#modal4:target {
+  opacity: 1;
+  visibility: visible;
+}
+
+#modal4 .modal-body {
+  opacity: 1;
+  transform: translateY(60px);
+}
+#modal5 {
+  opacity: 0;
+  transition:  opacity 0.5 ease-in-out;
+  visibility: hidden;
+
+}
+#modal5:target {
+  opacity: 1;
+  visibility: visible;
+}
+
+#modal5 .modal-body {
+  opacity: 1;
+  transform: translateY(60px);
+}
+#modal6 {
+  opacity: 0;
+  transition:  opacity 0.5 ease-in-out;
+  visibility: hidden;
+
+}
+#modal6:target {
+  opacity: 1;
+  visibility: visible;
+}
+
+#modal6 .modal-body {
+  opacity: 1;
+  transform: translateY(60px);
+}
+#modal7 {
+  opacity: 0;
+  transition:  opacity 0.5 ease-in-out;
+  visibility: hidden;
+
+}
+#modal7:target {
+  opacity: 1;
+  visibility: visible;
+}
+
+#modal7 .modal-body {
+  opacity: 1;
+  transform: translateY(60px);
+}
+#modal8 {
+  opacity: 0;
+  transition:  opacity 0.5 ease-in-out;
+  visibility: hidden;
+
+}
+#modal8:target {
+  opacity: 1;
+  visibility: visible;
+}
+
+#modal8 .modal-body {
+  opacity: 1;
+  transform: translateY(60px);
+}
+#modal9 {
+  opacity: 0;
+  transition:  opacity 0.5 ease-in-out;
+  visibility: hidden;
+
+}
+#modal9:target {
+  opacity: 1;
+  visibility: visible;
+}
+
+#modal9 .modal-body {
+  opacity: 1;
+  transform: translateY(60px);
+}
+#modal10 {
+  opacity: 0;
+  transition:  opacity 0.5 ease-in-out;
+  visibility: hidden;
+
+}
+#modal10:target {
+  opacity: 1;
+  visibility: visible;
+}
+
+#modal10 .modal-body {
+  opacity: 1;
+  transform: translateY(60px);
+}
+#modal11 {
+  opacity: 0;
+  transition:  opacity 0.5 ease-in-out;
+  visibility: hidden;
+
+}
+#modal11:target {
+  opacity: 1;
+  visibility: visible;
+}
+
+#modal11 .modal-body {
+  opacity: 1;
+  transform: translateY(60px);
+}
+#modal12 {
+  opacity: 0;
+  transition:  opacity 0.5 ease-in-out;
+  visibility: hidden;
+
+}
+#modal12:target {
+  opacity: 1;
+  visibility: visible;
+}
+
+#modal12 .modal-body {
+  opacity: 1;
+  transform: translateY(60px);
+}
+.modal-body {
+  position: relative;
+    margin: 5% auto;
+		max-width: 1200px;
+		opacity: 0;
+		transform: translateY(-100px);
+		transition: opacity 0.5 ease-in-out;
+		width: 100%;
+		z-index: 2;
+    background-color: #fff;
+	}
+
+.outside-trigger {
+	bottom: 0;
+	cursor: default;
+	left: 0;
+	position: fixed;
+	right: 0;
+	top: 0;
+}
+
+@media (max-width:767px){
+  .modal-body img {
+    margin-left: 22px;
+  }
+}
+

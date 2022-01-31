@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+.object{
+  background-color:#000;
+  width:150px;
+  height:150px;
+  border-radius:50%;
+  position:absolute;
+  top:50%;
+  left:50%;
+}
+    </style>
+</head>
+<body>
+    <div class='object'></div>
+    <script>
+ var initTop = 50
+ changeTop = initTop
+var endTop = 70
+ecTop = endTop
+var topu,topd;
+var object = document.getElementsByClassName('object');
+movingDown()
+function movingDown(){
+  setTimeout(function (){
+    topd = changeTop + '%';
+    object[0].style.top = topd;
+    changeTop++
+    if(changeTop<=endTop){
+        console.log(topd);
+      movingDown()
+    }
+    if(object[0].style.top == '70%'){
+      ecTop = endTop
+      movingUp()
+    }
+  },100)
+}
+function movingUp (){
+  setTimeout(function (){
+    topu = ecTop + '%';
+    object[0].style.top = topu;
+    ecTop--
+    if(ecTop>=initTop){
+      movingUp()
+}
+    if(object[0].style.top == '50%'){
+      changeTop = initTop
+      movingDown()
+    }
+     },100)
+}
+    </script>
+</body>
+</html>

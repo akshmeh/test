@@ -1,0 +1,76 @@
+String(<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+
+</head>
+<body >
+    <script>
+        let body=document.body,
+         htmlCode ={
+            "digiclock":"<div class='digiclock'></div>",
+            "semi":"<div class='semi'></div>",
+            "main":'<div class="main" onload="digitalClock()"></div>',
+            "baseClock":"<div class='baseClock'></div>"
+        },
+        styleClass ={
+            "digiclock" : ".digiclock{width:100%;display:flex;align-items:center;justify-content:center;flex-direction:column}",
+            "semiCircle" : ".semi{height: 80px;width: 20%;border-radius: 150px 150px 0 0;background-color: #ff2626ab;border:5px solid #eb0a0aab;border-bottom:0;}",
+            "mainClass":".main{display:flex;flex-direction:column;width:50%;height:300px;border:5px solid #eb0a0aab;align-items:center;justify-content:center;border-radius:50px;background-color:#ff2626ab;box-shadow:0px 8px 11px 0px #80808091;@media (max-width:767px){width:100%}}",
+            "baseClock":".baseClock{clip-path: polygon(20% 0%, 80% 0, 100% 100%, 0% 100%);background-color:#ff2626ab;width:50%;height:80px;border-bottom:5px solid #eb0a0aab}",
+            "timer" : ".timer{font-size:3rem;color:white;border:2px dotted #fff;padding:10px;border-radius:10px}",
+            "date" : ".date{font-size:2rem;color:white;margin:0}",
+            "blink" : ".blink{animation: blinks 1s linear infinite}@keyframes blinks {0%{opacity: 0;}50%{opacity: 1;}100%{opacity: 0;}}"
+        }
+        var style = document.createElement('style');
+        style.type = 'text/css';
+        document.getElementsByTagName('head')[0].appendChild(style);
+        style.innerHTML+=styleClass.digiclock;
+        style.innerHTML+=styleClass.semiCircle;
+        style.innerHTML+=styleClass.mainClass;
+        style.innerHTML+=styleClass.baseClock;
+        style.innerHTML+=styleClass.timer;
+        style.innerHTML+=styleClass.date;
+        style.innerHTML+=styleClass.blink;
+        body.innerHTML = htmlCode.digiclock;
+        var digiclock = document.querySelector('.digiclock');
+        digiclock.innerHTML = htmlCode.semi;
+        digiclock.innerHTML += htmlCode.main;
+        digiclock.innerHTML += htmlCode.baseClock;
+        
+        let mainElement=document.querySelector('.main')
+        mainElement.addEventListener('load',digitalClock())
+
+        // return month name not just a number
+        function digitalClock(){
+            const month = new Array();
+            month[0] = "January";
+            month[1] = "February";
+            month[2] = "March";
+            month[3] = "April";
+            month[4] = "May";
+            month[5] = "June";
+            month[6] = "July";
+            month[7] = "August";
+            month[8] = "September";
+            month[9] = "October";
+            month[10] = "November";
+            month[11] = "December";
+            const currentTime = new Date()
+            let Hours = currentTime.getHours(),
+            Minutes = String(currentTime.getMinutes()).padStart(2, '0'),
+            Seconds = String(currentTime.getSeconds()).padStart(2, '0');
+            today = String(currentTime.getDate()).padStart(2, '0');
+            Month = String(month[currentTime.getMonth()]).padStart(2,'0');
+            year = currentTime.getFullYear();
+            mainElement.innerHTML='<h2 style="color:#fff">Digital Clock</h2>';
+            mainElement.innerHTML +='<p class="timer">'+Hours+'<span class="blink"> : </span>'+Minutes+'<span class="blink"> : </span>'+Seconds+'</p>\n';  
+            mainElement.innerHTML +='<p class="date">'+today+'<span class="blink"> : </span>'+Month+'<span class="blink"> : </span>'+year+'</p>';
+            setTimeout(digitalClock,1000)
+        }
+    </script>
+</body>
+</html>

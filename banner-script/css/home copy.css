@@ -1,0 +1,487 @@
+
+.topsection{
+  margin-bottom: 20px;
+}
+.banner-heading{
+  width: 100%;
+}
+.banner-heading h1{
+  font-size: 1.5em;
+  line-height: 25px;
+  color: #195c65;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.flex{
+ padding:34px 80px;
+ /* background-color: #edf2f5; */
+ height: 700px;
+ background: url(../img/bannerImg/Banner-img.jpg);
+ background-size: contain;
+    background-repeat: no-repeat;
+    background-position-y: 100%;
+    position: relative;
+}
+.left-heading{
+  position: absolute;
+  top:55%;
+  left: 2%;
+  line-height: 19px;
+  text-align: center;
+  font-size: .9em;
+  color: #195c65;
+}
+.left-heading h2{
+  font-weight: 400;
+
+}
+.right-heading{
+  position: absolute;
+  top:55%;
+  right: 2%;
+  line-height: 19px;
+  text-align: center;
+  font-size: .9em;
+  color: #195c65;
+}
+.right-heading h2{
+  font-weight: 400;
+
+}
+.card{
+  float: left;
+margin:10px;
+  border-radius: 16px;
+  width: 260px;
+  height: 160px;
+  /* background: url(https://picsum.photos/360/360?image=0); */
+  background-color: #2e747d;
+  position: relative;
+  overflow: hidden;
+  /* box-shadow:-1px 0px 6px 4px rgb(59 138 148 / 44%); */
+  /* box-shadow:0px 0px 6px 4px rgb(154 153 148); */
+  /* border: 1px solid #56b0bc; */
+  border: 2px solid #2e747d;
+}
+.card-1{
+  background: url(../img/bannerImg/Cement.jpg);
+  width: 260px;
+  height: 160px;
+  margin-bottom: 20px;
+}
+.card-2{
+  background: url(../img/bannerImg/Horticulture.jpg);
+  
+  width: 160px;
+  height: 100px;
+  margin-bottom: 80px;
+}
+.card-3{
+  background: url(../img/bannerImg/Agro-chemicals.jpg);
+  width: 200px;
+  height: 140px;
+  margin-bottom: 40px;
+
+}
+.card-4{
+  background: url(../img/bannerImg/Food-services.jpg);
+  width: 120px;
+  height: 100px;
+  margin-bottom: 80px;
+}
+.card-5{
+  background: url(../img/bannerImg/consulting.jpg);
+  margin-left: 70px;
+  width: 160px;
+  height: 160px;
+}
+.card-6{
+  background: url(../img/bannerImg/Financial-services.jpg);
+  width: 230px;
+  height: 130px;
+  margin-bottom: 50px;  
+  
+}
+.card-7{
+  background: url(../img/bannerImg/Sports-Entertainment.jpg);
+  width: 260px;
+  height: 180px; 
+  
+}
+.card-8{
+background: url(../img/bannerImg/International-trade.jpg);
+  width: 220px;
+  height: 120px;
+  margin-bottom: 60px;
+}
+.card-9{
+  background: url(../img/bannerImg/Sugar.jpg);
+  width: 150px;
+  height: 100px;
+}
+.card-10{
+  background: url(../img/bannerImg/Electric-cables.jpg);
+  width: 150px;
+  height: 130px;
+}
+.card-11{
+  background: url(../img/bannerImg/engineering.jpg);
+  width: 140px;
+  height: 90px;
+}
+.card:before{
+
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background-color: rgba(#000,.92);
+}
+  .img{
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+  }
+    .card span{
+
+      width: 25%;
+      height: 100%;
+      /* background: url(https://picsum.photos/360/360?image=0); */
+      background-color: #56b0bc;
+      background-size: 260px;
+      transition: .5s;
+    }
+    .card-1 span{
+      background: url(../img/bannerImg/Cement.jpg );
+    }
+    .card-2 span{
+      background: url(../img/bannerImg/Horticulture.jpg);
+    }
+    .card-3 span{
+      background: url(../img/bannerImg/Agro-chemicals.jpg);
+    }
+    .card-4 span{
+      background: url(../img/bannerImg/Food-services.jpg);
+    }
+    .card-5 span{
+      background: url(../img/bannerImg/consulting.jpg);
+    }
+    .card-6 span{
+      background: url(../img/bannerImg/Financial-services.jpg);
+    }
+    .card-7 span{
+      background: url(../img/bannerImg/Sports-Entertainment.jpg);
+    }
+    .card-8 span{
+      background: url(../img/bannerImg/International-trade.jpg);
+    }
+    .card-9 span{
+      background: url(../img/bannerImg/Sugar.jpg);
+    }
+    .card-10 span{
+      background: url(../img/bannerImg/Electric-cables.jpg);
+    }
+    .card-11 span{
+      background: url(../img/bannerImg/engineering.jpg);
+    }
+    span:nth-child(1){
+
+      background-position: 0;
+      transition-delay: 0;
+    }
+        span:nth-child(2){
+
+          background-position: 33.33333%;
+          transition-delay: .1s;
+        }
+        span:nth-child(3){
+
+          background-position: 66.66666%;
+          transition-delay: .2s;
+        }
+        span:nth-child(4){
+
+          background-position: 100%;
+          transition-delay: .3s;
+        }
+        
+.card:hover .img>span{
+
+  transform: translateY(-100%)
+}
+.card:hover .content-home{
+
+    transform: translateY(0%);
+    transition: 1s;
+    transition-delay: .1s;
+    background-color: rgba(0, 0, 0, 0.734);
+  }
+  
+.content-home{
+
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  padding: 20px 20px;
+  width: 100%;
+  height: 100%;
+  transform: translateY(100%);
+  line-height: 22px;
+  font-size: 0.9em;
+}
+
+/* model */
+.modal-body img{
+  float: left;
+  width: 56%;
+  height: 450px;
+  border: 3px solid #2e747d;
+}
+.modal-header {
+  color: #fff;
+  margin-left: 24px;
+  float: left;
+line-height: 50px;
+width: 38%;
+}
+.modal-body h1{
+  color: #fff;
+  font-size: 22px;
+}
+.modal-body h3{
+  color: #fff;
+  font-size: 16px;
+}
+.modal-body p{
+  color: #fff;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+
+.close {
+	background: none;
+	border: none;
+	cursor: pointer;
+	/* display: flex; */
+	height: 16px;
+	text-decoration: none;
+	width: 16px;
+
+}
+.close svg {
+  width: 16px;
+}
+
+.modal-wrapper {
+	align-items: center;
+	background: rgba(0, 0, 0, 0.8);
+	bottom: 0;
+	/* display: flex; */
+	justify-content: center;
+	left: 0;
+	position: fixed;
+	right: 0;
+	top: 0;
+  z-index: 1;
+}
+
+#modal {
+	opacity: 0;
+	transition:  opacity 0.5 ease-in-out;
+	visibility: hidden;
+
+}
+#modal:target {
+  opacity: 1;
+  visibility: visible;
+}
+
+#modal .modal-body {
+  opacity: 1;
+  transform: translateY(60px);
+}
+#modal2 {
+	opacity: 0;
+	transition:  opacity 0.5 ease-in-out;
+	visibility: hidden;
+
+}
+#modal2:target {
+  opacity: 1;
+  visibility: visible;
+}
+
+#modal2 .modal-body {
+  opacity: 1;
+  transform: translateY(60px);
+}
+#modal3 {
+  opacity: 0;
+  transition:  opacity 0.5 ease-in-out;
+  visibility: hidden;
+
+}
+#modal3:target {
+  opacity: 1;
+  visibility: visible;
+}
+
+#modal3 .modal-body {
+  opacity: 1;
+  transform: translateY(60px);
+}
+#modal4 {
+  opacity: 0;
+  transition:  opacity 0.5 ease-in-out;
+  visibility: hidden;
+
+}
+#modal4:target {
+  opacity: 1;
+  visibility: visible;
+}
+
+#modal4 .modal-body {
+  opacity: 1;
+  transform: translateY(60px);
+}
+#modal5 {
+  opacity: 0;
+  transition:  opacity 0.5 ease-in-out;
+  visibility: hidden;
+
+}
+#modal5:target {
+  opacity: 1;
+  visibility: visible;
+}
+
+#modal5 .modal-body {
+  opacity: 1;
+  transform: translateY(60px);
+}
+#modal6 {
+  opacity: 0;
+  transition:  opacity 0.5 ease-in-out;
+  visibility: hidden;
+
+}
+#modal6:target {
+  opacity: 1;
+  visibility: visible;
+}
+
+#modal6 .modal-body {
+  opacity: 1;
+  transform: translateY(60px);
+}
+#modal7 {
+  opacity: 0;
+  transition:  opacity 0.5 ease-in-out;
+  visibility: hidden;
+
+}
+#modal7:target {
+  opacity: 1;
+  visibility: visible;
+}
+
+#modal7 .modal-body {
+  opacity: 1;
+  transform: translateY(60px);
+}
+#modal8 {
+  opacity: 0;
+  transition:  opacity 0.5 ease-in-out;
+  visibility: hidden;
+
+}
+#modal8:target {
+  opacity: 1;
+  visibility: visible;
+}
+
+#modal8 .modal-body {
+  opacity: 1;
+  transform: translateY(60px);
+}
+#modal9 {
+  opacity: 0;
+  transition:  opacity 0.5 ease-in-out;
+  visibility: hidden;
+
+}
+#modal9:target {
+  opacity: 1;
+  visibility: visible;
+}
+
+#modal9 .modal-body {
+  opacity: 1;
+  transform: translateY(60px);
+}
+#modal10 {
+  opacity: 0;
+  transition:  opacity 0.5 ease-in-out;
+  visibility: hidden;
+
+}
+#modal10:target {
+  opacity: 1;
+  visibility: visible;
+}
+
+#modal10 .modal-body {
+  opacity: 1;
+  transform: translateY(60px);
+}
+#modal11 {
+  opacity: 0;
+  transition:  opacity 0.5 ease-in-out;
+  visibility: hidden;
+
+}
+#modal11:target {
+  opacity: 1;
+  visibility: visible;
+}
+
+#modal11 .modal-body {
+  opacity: 1;
+  transform: translateY(60px);
+}
+.modal-body {
+    margin: 5% auto;
+		max-width: 1200px;
+		opacity: 0;
+		transform: translateY(-100px);
+		transition: opacity 0.5 ease-in-out;
+		width: 100%;
+		z-index: 2;
+    background-color: #fff;
+	}
+
+.outside-trigger {
+	bottom: 0;
+	cursor: default;
+	left: 0;
+	position: fixed;
+	right: 0;
+	top: 0;
+}
+
+@media (max-width:767px){
+  .modal-body img {
+    margin-left: 22px;
+  }
+}
+

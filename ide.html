@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+      body{
+        font-family: 'Josefin Sans', sans-serif;
+        background-color:rgb(39, 39, 39);
+      }
+      .darkblue{
+        color: #2566ca;
+      }
+      .lightblue{
+        color: #7bdcda;
+      }
+      .brown{
+        color: #ac4c1e;
+      }
+.ide{
+  width:100%;
+  position:relative;
+}
+.title{
+  color:#fff;
+padding:10px 10px;
+  background-color: rgb(128, 128, 128);
+  /* width:50px */
+}
+.title span{
+  font-weight: 900;
+  color: orangered;
+}
+.contain{
+  color: #fff;
+}
+li{
+  list-style: decimal;
+  padding:0 10px;
+  /* width: max-content; */
+}
+.typing li{
+  /* border-right:1px solid #fff; */
+  overflow: hidden;
+  animation: typing 3s steps(30,end) 1,
+  cursor-blink 0.75s step-end infinite;
+  word-break:keep-all;
+  white-space: nowrap;
+}
+@keyframes typing {
+  from{
+    width: 0;
+  }
+  to{
+    width: 50%;
+  }
+}
+@keyframes cursor-blink {
+  from{
+border-right: 1px solid #fff;
+  }
+  to{
+    border-right: 1px solid transparent;
+  }
+}
+    </style>
+</head>
+<body>
+  <div class='ide'>
+    <div class="title"><span>&lt;&gt;</span> index.html&nbsp;&nbsp;&nbsp;X</div>
+    <div class="contain">
+      <ul class="typing">
+        <li>&lt;<span class="darkblue">!DOCTYPE</span> <span class="lightblue">html</span>&gt;</li>
+        <li>&lt;<span class="darkblue">html</span> <span class="lightblue">lang</span>=<span class="brown">"en"</span>&gt;</li>
+        <li>&lt;<span class="darkblue">head</span>&gt;</li>
+        <li>&lt;<span class="darkblue">meta</span> <span class="lightblue">charset</span>=<span class="brown">"UTF-8"</span>&gt;</li>
+        <li>&lt;<span class="darkblue">meta</span> <span class="lightblue">http-equiv</span>=<span class="brown">"X-UA-Compatible" </span><span class="lightblue">content</span>=<span class="brown">"IE=edge"</span>&gt;</li>
+        <li>&lt;<span class="darkblue">meta</span> <span class="lightblue">name</span>=<span class="brown">"viewport"</span> <span class="lightblue">content</span>=<span class="brown">"width=device-width, initial-scale=1.0"</span>&gt;</li>
+        <li>&lt;<span class="darkblue">title</span>&gt;Document&lt;<span class="darkblue">title</span>&gt;</li>
+        <li>&lt;<span class="darkblue">/head</span>&gt;</li>
+        <li>&lt;<span class="darkblue">body</span>&gt;</li>
+        <li><code>&nbsp;</code></li>
+        <li>&lt;<span class="darkblue">/body</span>&gt;</li>
+        <li>&lt;<span class="darkblue">/html</span>&gt;</li>
+      </ul>
+    </div>
+  </div>
+    <script>
+var lines = document.querySelectorAll('.typing li');
+    </script>
+</body>
+</html>

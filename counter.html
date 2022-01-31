@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+</head>
+<body>
+    <script>
+        //define number of counter you want
+        var numberCount = 3,
+        //define numbers and make sure the count of numbers is always equl to numberCount
+        numbers=[200,3000,500],
+        //counter duration
+        durationAll = 3000
+        //number starts from 0 to define number
+        start = 0
+
+        var body = document.getElementsByTagName('body'),
+        main = document.createElement('div'),
+        style = document.createElement('style'),
+        styles ={
+            "counterMain" : ".counterMain{padding:10px;display:flex;}",
+            "counter" : ".counter{padding:10px 20px;border:1px solid #000}"
+        }
+        style.type ='text/css';
+        document.getElementsByTagName('head')[0].appendChild(style);
+        body[0].appendChild(main);
+        main.classList.add('counterMain');
+        var counterMain = document.querySelector('.counterMain');
+        style.innerHTML += styles.counterMain;
+        style.innerHTML += styles.counter;
+        for(var i =1;i<=numberCount;i++){
+            let counterDiv = '<div class="counter counter'+[i]+'"></div>'
+            counterMain.innerHTML+= counterDiv;
+        }
+        var counter = document.getElementsByClassName('counter');
+
+                document.addEventListener("DOMContentLoaded", () => {
+                    function counter(id,start, end, duration) {
+                    
+                    let obj = document.querySelector(id),
+                    current = start,
+                    range = end - start,
+                    increment = end > start ? 1 : -1,
+                    step = Math.abs(Math.floor(duration / range)),
+                    timer = setInterval(() => {
+                        current += increment;
+                        obj.textContent = current;
+                        if (current == end) {
+                        clearInterval(timer);
+                        }
+                    }, step);
+                    }
+                    for(let i=0;i<numbers.length;i++){
+                        let limit = i+1
+                        console.warn(limit)
+                        // if(limit<=counter.length){
+                            // console.warn(limit)
+                            let classes = '.counter'+limit;
+                                counter(classes,start, numbers[i], durationAll);
+                        //}
+                    
+                    }
+        });
+
+    </script>
+</body>
+</html>

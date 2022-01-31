@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>auto</title>
+    <style>
+div.row{
+  display:flex;
+  flex-direction:row;
+}
+div.element{
+  width:100px;
+  height:100px;
+  border:1px solid black;
+  background-color: white;
+  transition: 1s;
+}
+.color{
+    background-color: turquoise !important;
+    transition: .5s;
+}
+    </style>
+</head>
+<body>
+    <div class="row">
+
+
+        <div class="element" id="ele1">
+        
+        </div>
+        <div class="element" id="ele2">
+        
+        </div>
+        <div class="element" id="ele3">
+        
+        </div>
+        <div class="element" id="ele4">
+        
+        </div>
+        <div class="element" id="ele5">
+        
+        </div>
+        </div>
+    <script>
+
+var e = 0;
+autoColor();
+function autoColor(){
+    var ele = document.getElementsByClassName('element');
+    for(var i = 0;i<ele.length;i++){
+        if(ele[i].classList.contains('color')){
+            ele[i].classList.remove('color');
+        }
+    }
+    e++;
+    if(e > ele.length){e=1}
+    ele[e-1].classList.add('color');
+        setTimeout(autoColor,4000)
+}
+
+    </script>
+    <script>
+        var n1 = document.querySelector('.map-legend:nth-child(1)');
+        var n2 = document.querySelector('.map-legend:nth-child(2)');
+        var n3 = document.querySelector('.map-legend:nth-child(3)');
+        var n4 = document.querySelector('.map-legend:nth-child(4)');
+        var n5 = document.querySelector('.map-legend:nth-child(5)');
+        var n6 = document.querySelector('.map-legend:nth-child(6)');
+        var n7 = document.querySelector('.map-legend:nth-child(7)');
+        var n8 = document.querySelector('.map-legend:nth-child(8)');
+        var n9 = document.querySelector('.map-legend:nth-child(9)');
+        var n10 = document.querySelector('.map-legend:nth-child(10)');
+        var n11 = document.querySelector('.map-legend:nth-child(11)');
+        var n12 = document.querySelector('.map-legend:nth-child(12)');
+        
+        // var mapPopup1 = document.querySelector('.map-legend:nth-child(1) .map-popup');
+        // var mapPopup2 = document.querySelector('.map-legend:nth-child(2) .map-popup');
+        // var mapPopup3 = document.querySelector('.map-legend:nth-child(3) .map-popup');
+        // var mapPopup4 = document.querySelector('.map-legend:nth-child(4) .map-popup');
+        // var mapPopup5 = document.querySelector('.map-legend:nth-child(5) .map-popup');
+        // var mapPopup6 = document.querySelector('.map-legend:nth-child(6) .map-popup');
+        // var mapPopup7 = document.querySelector('.map-legend:nth-child(7) .map-popup');
+        // var mapPopup8 = document.querySelector('.map-legend:nth-child(8) .map-popup');
+        // var mapPopup9 = document.querySelector('.map-legend:nth-child(9) .map-popup');
+        // var mapPopup10 = document.querySelector('.map-legend:nth-child(10) .map-popup');
+        // var mapPopup11 = document.querySelector('.map-legend:nth-child(11) .map-popup');
+        // var mapPopup12 = document.querySelector('.map-legend:nth-child(12) .map-popup');
+        
+        
+        // n1.addEventListener('mouseover',() => {for(let e=1;e<=12;e++)1!==e&&document.getElementById("ele"+e).classList.add("visible-none");mapPopup1.classList.add("map-popup-remove");mapPopup1.classList.remove("map-popup-add")})
+        // mapPopup1.addEventListener('mouseout',() => {for(let e=1;e<=12;e++)1!==e&&document.getElementById("ele"+e).classList.remove("visible-none");mapPopup1.classList.remove("map-popup-remove");mapPopup1.classList.add("map-popup-add")})
+         
+        // n2.addEventListener('mouseover',() => {for(let e=1;e<=12;e++)2!==e&&document.getElementById("ele"+e).classList.add("visible-none");mapPopup2.classList.add("map-popup-remove");mapPopup2.classList.remove("map-popup-add")})
+        // mapPopup2.addEventListener('mouseout',() =>{for(let e=1;e<=12;e++)2!==e&&document.getElementById("ele"+e).classList.remove("visible-none");mapPopup2.classList.remove("map-popup-remove");mapPopup2.classList.add("map-popup-add")})
+         
+        // n3.addEventListener('mouseover',() => {for(let e=1;e<=12;e++)3!==e&&document.getElementById("ele"+e).classList.add("visible-none");mapPopup3.classList.add("map-popup-remove");mapPopup3.classList.remove("map-popup-add")})
+        // mapPopup3.addEventListener('mouseout',() =>{for(let e=1;e<=12;e++)3!==e&&document.getElementById("ele"+e).classList.remove("visible-none");mapPopup3.classList.remove("map-popup-remove");mapPopup3.classList.add("map-popup-add")})
+         
+        // n4.addEventListener('mouseover',() => {for(let e=1;e<=12;e++)4!==e&&document.getElementById("ele"+e).classList.add("visible-none");mapPopup4.classList.add("map-popup-remove");mapPopup4.classList.remove("map-popup-add")})
+        // mapPopup4.addEventListener('mouseout',() =>{for(let e=1;e<=12;e++)4!==e&&document.getElementById("ele"+e).classList.remove("visible-none");mapPopup4.classList.remove("map-popup-remove");mapPopup4.classList.add("map-popup-add")})
+         
+        // n5.addEventListener('mouseover',() => {for(let e=1;e<=12;e++)5!==e&&document.getElementById("ele"+e).classList.add("visible-none");mapPopup5.classList.add("map-popup-remove");mapPopup5.classList.remove("map-popup-add")})
+        // mapPopup5.addEventListener('mouseout',() =>{for(let e=1;e<=12;e++)5!==e&&document.getElementById("ele"+e).classList.remove("visible-none");mapPopup5.classList.remove("map-popup-remove");mapPopup5.classList.add("map-popup-add")})
+         
+        // n6.addEventListener('mouseover',() => {for(let e=1;e<=12;e++)6!==e&&document.getElementById("ele"+e).classList.add("visible-none");mapPopup6.classList.add("map-popup-remove");mapPopup6.classList.remove("map-popup-add")})
+        // mapPopup6.addEventListener('mouseout',() =>{for(let e=1;e<=12;e++)6!==e&&document.getElementById("ele"+e).classList.remove("visible-none");mapPopup6.classList.remove("map-popup-remove");mapPopup6.classList.add("map-popup-add")})
+         
+        // n7.addEventListener('mouseover',() => {for(let e=1;e<=12;e++)7!==e&&document.getElementById("ele"+e).classList.add("visible-none");mapPopup7.classList.add("map-popup-remove");mapPopup7.classList.remove("map-popup-add")})
+        // mapPopup7.addEventListener('mouseout',() =>{for(let e=1;e<=12;e++)7!==e&&document.getElementById("ele"+e).classList.remove("visible-none");mapPopup7.classList.remove("map-popup-remove");mapPopup7.classList.add("map-popup-add")})
+         
+        // n8.addEventListener('mouseover',() => {for(let e=1;e<=12;e++)8!==e&&document.getElementById("ele"+e).classList.add("visible-none");mapPopup8.classList.add("map-popup-remove");mapPopup8.classList.remove("map-popup-add")})
+        // mapPopup8.addEventListener('mouseout',() =>{for(let e=1;e<=12;e++)8!==e&&document.getElementById("ele"+e).classList.remove("visible-none");mapPopup8.classList.remove("map-popup-remove");mapPopup8.classList.add("map-popup-add")})
+         
+        // n9.addEventListener('mouseover',() => {for(let e=1;e<=12;e++)9!==e&&document.getElementById("ele"+e).classList.add("visible-none");mapPopup9.classList.add("map-popup-remove");mapPopup9.classList.remove("map-popup-add")})
+        // mapPopup9.addEventListener('mouseout',() =>{for(let e=1;e<=12;e++)9!==e&&document.getElementById("ele"+e).classList.remove("visible-none");mapPopup9.classList.remove("map-popup-remove");mapPopup9.classList.add("map-popup-add")})
+         
+        // n10.addEventListener('mouseover',() => {for(let e=1;e<=12;e++)10!==e&&document.getElementById("ele"+e).classList.add("visible-none");mapPopup10.classList.add("map-popup-remove");mapPopup10.classList.remove("map-popup-add")})
+        // mapPopup10.addEventListener('mouseout',() =>{for(let e=1;e<=12;e++)10!==e&&document.getElementById("ele"+e).classList.remove("visible-none");mapPopup10.classList.remove("map-popup-remove");mapPopup10.classList.add("map-popup-add")})
+         
+        // n11.addEventListener('mouseover',() => {for(let e=1;e<=12;e++)11!==e&&document.getElementById("ele"+e).classList.add("visible-none");mapPopup11.classList.add("map-popup-remove");mapPopup11.classList.remove("map-popup-add")})
+        // mapPopup11.addEventListener('mouseout',() =>{for(let e=1;e<=12;e++)11!==e&&document.getElementById("ele"+e).classList.remove("visible-none");mapPopup11.classList.remove("map-popup-remove");mapPopup11.classList.add("map-popup-add")})
+         
+        // n12.addEventListener('mouseover',() => {for(let e=1;e<=12;e++)12!==e&&document.getElementById("ele"+e).classList.add("visible-none");mapPopup12.classList.add("map-popup-remove");mapPopup12.classList.remove("map-popup-add")})
+        // mapPopup12.addEventListener('mouseout',() =>{for(let e=1;e<=12;e++)12!==e&&document.getElementById("ele"+e).classList.remove("visible-none");mapPopup12.classList.remove("map-popup-remove");mapPopup12.classList.add("map-popup-add")})
+         
+        // for(let v=1;v<=12;v++){
+        //   // 1 4 5 7 11
+        // if(v===2 || v===3 ||v===6 ||v===8 ||v===9 ||v===10 ||v===12){continue;}
+        //   var pathIN = document.getElementById('IN');
+        //   document.getElementById('ele'+v).addEventListener('mouseover',()=>{pathIN.classList.add('slide-fwd-center');})
+        //   document.getElementById('ele'+v).addEventListener('mouseout',()=>{pathIN.classList.remove('slide-fwd-center');})
+        // }
+        // for(let v=1;v<=12;v++){
+        // if(v===1 || v===3 || v===4 ||v===5 ||v===7 ||v===11){continue;}
+        //   var pathUG = document.getElementById('UG');
+        //   document.getElementById('ele'+v).addEventListener('mouseover',()=>{pathUG.classList.add('slide-fwd-center');})
+        //   document.getElementById('ele'+v).addEventListener('mouseout',()=>{pathUG.classList.remove('slide-fwd-center');})
+        // }
+        
+        // var pathKE = document.getElementById('KE');
+        // document.getElementById('ele3').addEventListener('mouseover',()=>{pathKE.classList.add('slide-fwd-center');})
+        // document.getElementById('ele3').addEventListener('mouseout',()=>{pathKE.classList.remove('slide-fwd-center');})
+        
+        //map zoom effect
+        var mapContainer =document.querySelector('.map-container')
+        var widthScreen = mapContainer.clientWidth,
+             heightScreen = mapContainer.clientHeight;
+        
+        var translateX = '-' + (widthScreen * 12)/100 + 'px', //14 - coefficient
+             translateY = (heightScreen * -15)/100 + 'px'; //20 - coefficient
+        
+        var translateIn = 'scale(4) ' + 'translate'+ '(' + translateX + ',' + translateY + ')',
+             translateOut = 'scale(1) ' + 'translate(0)';
+        
+        
+        //Elements
+        
+        var map = document.querySelector('.world-map-div'),
+             locationButton = document.querySelector('.map-container'),
+             body = document.querySelector('body');
+        
+        
+        //Location click event
+        
+        locationButton.addEventListener('mouseover', function() {
+            
+            var mapIncreased = map.classList.contains('mapIn');
+        
+            if (mapIncreased) { //Out
+                // map.classList.toggle('mapIn');
+                // map.classList.add('mapOut');
+                // map.style.transform = translateOut;
+                // n1.classList.remove('map-legend-1');
+            
+            } else { //In
+                map.classList.add('mapIn');
+                map.classList.remove('mapOut');
+                map.style.transform = translateIn;
+                //location position change after zoom in effect
+                n1.classList.add('map-legend-1');
+                n2.classList.add('map-legend-2');
+                n3.classList.add('map-legend-3');
+                n4.classList.add('map-legend-4');
+                n5.classList.add('map-legend-5');
+                n6.classList.add('map-legend-6');
+                n7.classList.add('map-legend-7');
+                n8.classList.add('map-legend-8');
+                n9.classList.add('map-legend-9');
+                n10.classList.add('map-legend-10');
+                n11.classList.add('map-legend-11');
+                n12.classList.add('map-legend-12');
+        
+                document.querySelector('.paper-top-label').style.display="block"
+                //to prevent zoomin effect on location
+                setTimeout(() => {
+                  
+                  for(var rt=1;rt<=12;rt++)
+                  {
+                    document.querySelector('.map-legend-'+rt).style.transition="none"
+                  }
+                }, 4000);
+                //location automation start after zoomin effect
+                var e = 0;
+            var ele = document.getElementsByClassName('map-legend');
+            var pop = document.getElementsByClassName('map-popup');
+            let sT;
+            let mouse = false;
+            // loop automation
+            function autoColor(){
+                for(var i = 0;i<ele.length;i++){
+                    if(ele[i].classList.contains('map-legend-add')){
+                        ele[i].classList.remove('map-legend-add');
+                        pop[i].classList.remove('mp-active');
+                    }
+                }
+                e++;
+                if(e > ele.length){e=1}
+                ele[e-1].classList.add('map-legend-add');
+                pop[e-1].classList.add('mp-active');
+                // console.log(e)
+              }
+              sT =setInterval(autoColor,3000);
+              //if some one mouse over then stop animation
+            const mousE=false;
+                for(var l = 0;l<ele.length;l++){
+                ele[l].addEventListener('mouseover',()=>{
+                  mouse = true;
+                  sT && clearInterval(sT)
+                  for(var k=1;k<13;k++){
+                    // console.log(document.getElementById('ele'+k))
+                    if(document.getElementById('ele'+k).classList.contains('map-legend-add')){
+                      document.getElementById('ele'+k).classList.remove('map-legend-add')
+                      document.querySelector('#ele'+k+' .map-popup').classList.remove('mp-active');
+                    }
+                  }
+                 })
+                 ele[l].addEventListener('mouseout',()=>{
+                   mouse = false;
+                   if(!mousE){
+                     // mouse=true;
+                     sT = setInterval(autoColor,3000);
+                    }
+                  })
+                }
+                 
+            }
+                
+        });
+        
+        </script>
+</body>
+</html>
